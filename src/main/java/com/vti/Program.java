@@ -1,5 +1,29 @@
 package com.vti;
 
+
+// =========================
+// Các class
+
+
+class Department {
+    int id;
+    String name;
+}
+
+class Position {
+    String name;
+}
+
+class Group {
+    String name;
+}
+
+class Account {
+    Department department;
+    Position position;
+    Group[] groups;
+}
+
 public class Program {public static void main(String[] args) {
 
     // Tạo Department
@@ -100,25 +124,4 @@ public class Program {public static void main(String[] args) {
         System.out.println(result);
     }
 }
-// =========================
-// Các class
 
-
-class Department {
-    int id;
-    String name;
-}
-
-class Position {
-    String name;
-}
-
-class Group {
-    String name;
-}
-
-class Account {
-    Department department;
-    Position position;
-    Group[] groups;
-}
