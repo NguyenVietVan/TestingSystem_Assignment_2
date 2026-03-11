@@ -54,14 +54,14 @@ public class Program {
         Exercise4.question7();
         //5
         System.out.println("exercise5");
-        Exercise5.question1();
-        Exercise5.question2();
-        Exercise5.question3();
-        Exercise5.question4();
-        Exercise5.question5();
-        Exercise5.question6();
+       // Exercise5.question1();
+       // Exercise5.question2();
+       // Exercise5.question3();
+       // Exercise5.question4();
+       // Exercise5.question5();
+       // Exercise5.question6();
         Exercise5.question7();
-        Exercise5.question8();
+       //Exercise5.question8();
         Exercise5.question9();
         Exercise5.question10();
         Exercise5.question11();

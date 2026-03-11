@@ -137,30 +137,61 @@ public class Exercise5 {static Scanner scanner = new Scanner(System.in);
     // Question 9
 // Thêm group vào account
     public static void question9() {
+
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Danh sách username:");
-        for (Account acc : ProgramData.accounts) {
-            System.out.println(acc.userName);
-        }
-        System.out.println("Nhập username:");
-        String username = scanner.nextLine();
-        Account account = null;
-        for (Account acc : ProgramData.accounts) {
-            if (acc.userName.equals(username)) {
-                account = acc;
+        String choice;
+
+        do {
+
+            System.out.println("Danh sách username:");
+            for (Account acc : ProgramData.accounts) {
+                System.out.println(acc.userName);
             }
-        }
-        System.out.println("Danh sách group:");
-        for (Group group : ProgramData.groups) {
-            System.out.println(group.groupName);
-        }
-        System.out.println("Nhập tên group:");
-        String groupName = scanner.nextLine();
-        for (Group group : ProgramData.groups) {
-            if (group.groupName.equals(groupName)) {
-                System.out.println("Đã thêm " + username + " vào group " + groupName);
+
+            System.out.print("Nhập username: ");
+            String username = scanner.nextLine();
+
+            Account account = null;
+            for (Account acc : ProgramData.accounts) {
+                if (acc.userName.equals(username)) {
+                    account = acc;
+                    break;
+                }
             }
-        }
+
+            if (account == null) {
+                System.out.println("Không tìm thấy account");
+                return;
+            }
+
+            System.out.println("Danh sách group:");
+            for (Group group : ProgramData.groups) {
+                System.out.println(group.groupName);
+            }
+
+            System.out.print("Nhập tên group: ");
+            String groupName = scanner.nextLine();
+
+            Group groupSelected = null;
+            for (Group group : ProgramData.groups) {
+                if (group.groupName.equals(groupName)) {
+                    groupSelected = group;
+                    break;
+                }
+            }
+
+            if (groupSelected == null) {
+                System.out.println("Không tìm thấy group");
+                return;
+            }
+
+            System.out.println("Đã thêm " + username + " vào group " + groupName);
+
+            System.out.print("Bạn có muốn tiếp tục không? (Y/N): ");
+            choice = scanner.nextLine();
+
+        } while (!choice.equalsIgnoreCase("N"));
+
     }
     // Question 10
 
